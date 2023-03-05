@@ -5,13 +5,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Mi Presupuesto </title>
-    <link href="/dist/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <header>
-        <h1> Mi Presupuesto </h1>
+        <h1 class="presupuesto"> Mi Presupuesto </h1>
+        <input type="text" placeholder="Ingrese su apodo estrella" name="name" class="bienvenido" id="bienvenida" >
+        <br>
+        <div>
+            <fieldset class="informacion">
+                <form action="" method="get" enctype="text/plain">
+                    <div>
+                        <label for="name">Nombre y Apellido</label>
+                        <input type="text" name="name" id="name">
+                    </div>
+                    <div>
+                        <label for="age">Edad</label>
+                        <input type="number" name="age" id="age" min="18" max="100">
+                    </div>
+                    <div>
+                        <label for="email">Correo Electronico</label>
+                        <input type="email" name="email" id="email">
+                    </div>
+                    <div>
+                        <label for="country">Pais de Residencia</label>
+                        <input type="country" name="country" id="country">
+                    </div>
+                    <div>
+                        <label for="money">Ingresos</label>
+                        <input type="money" name="money" id="money" placeholder="$">
+                    </div>
+                    <button class="informacion">
+                        Guardar informacion
+                    </button>
+                </form>
+            </fieldset>
+        </div>
     </header>
-    
+    <br>
+    <section>
+        <fieldset class="moneda">
+        <form action="" target="_blank">
+            <p>
+                En que moneda recibe sus ingresos: <br>
+                <input type="checkbox" name="usd">
+                Moneda Dolar <br>
+                <input type="checkbox" name="ars">
+                Moneda Peso Argentina <br>
+                <input type="checkbox" name="cop">
+                Moneda Peso Colombiana <br>
+                <input type="checkbox" name="eur">
+                Moneda Euro <br>
+            </p>
+            <p><input type="submit" value="Enviar información"></p>
+        </form>
+        </fieldset>
+
+    </section>
     <script src="./main.js"></script>
 </body>
 </html>

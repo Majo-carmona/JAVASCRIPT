@@ -1,22 +1,29 @@
 
-function pedirDato (){
-    let dato = prompt("Ingresa tu apodo estrella")
-    let mensaje = `Hola ${dato} Bienvenido a Mi Presupuesto`
-    alert(mensaje)
+function formulario (){
+    let formulario = prompt("Ingresa tu apodo Estrella")
+    let mensaje = `Hola ${formulario} Bienvenido a Mi Presupuesto`
+    alert(mensaje);
 }
-pedirDato()
+formulario()
 
-const usuarios = {
+const usuario = {
     nombre: prompt("Ingrese Nombre y Apellido"),
     edad: prompt("Cuantos años tienes?"),
+    correo: prompt("Ingrese su correo electronico"),
     pais: prompt("Ingrese su pais de residencia"),
     salario: parseInt(prompt("Ingrese el valor de su salario")),
 };
+let usuarioStorage = localStorage.getItem("usuario");
 
-console.log(usuarios.nombre);
-console.log(usuarios.edad);
-console.log(usuarios.pais);
-console.log(usuarios.salario);
+if(usuarioStorage){
+    usuario = usuarioStorage;
+    alert(`Bienvenid@ ${usuario}`);
+}else{
+    localStorage.setItem("usuario", usuario);
+    alert(`Eres nuevo, Bienvenido ${usuario.nombre}`);
+}
+
+localStorage.setItem("usuario", JSON.stringify(usuario));
 
 let monedaIngresos = prompt("en que moneda recibe sus ingresos.");
 
