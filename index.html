@@ -7,16 +7,16 @@
     <title> Mi Presupuesto </title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <header>
-        <h1 class="presupuesto"> Mi Presupuesto </h1>
-        <input type="text" placeholder="Ingrese su apodo estrella" name="name" class="bienvenido" id="bienvenida" >
         <br>
         <div>
             <fieldset class="informacion">
-                <form action="" method="get" enctype="text/plain">
+                <form id="info" action="" method="get" enctype="text/plain">
                     <div>
                         <label for="name">Nombre y Apellido</label>
                         <input type="text" name="name" id="name">
@@ -27,19 +27,17 @@
                     </div>
                     <div>
                         <label for="email">Correo Electronico</label>
-                        <input type="email" name="email" id="email">
+                        <input type="text" name="email" id="email">
                     </div>
                     <div>
                         <label for="country">Pais de Residencia</label>
-                        <input type="country" name="country" id="country">
+                        <input type="text" name="country" id="country">
                     </div>
                     <div>
                         <label for="money">Ingresos</label>
-                        <input type="money" name="money" id="money" placeholder="$">
+                        <input type="number" name="money" id="money" placeholder="$">
                     </div>
-                    <button class="informacion">
-                        Guardar informacion
-                    </button>
+                    <input type="submit" value="Guardar Informacion">
                 </form>
             </fieldset>
         </div>
